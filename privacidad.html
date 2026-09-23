@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Política de Privacidad — Salmista Acordes</title>
+<link rel="canonical" href="https://suitedelsalmista.com/privacidad.html">
 <style>
   :root {
     --bg: #ffffff;
@@ -12,6 +13,9 @@
     --rule: #e2e2e2;
     --accent: #2f6f5e;
     --card: #f7f8f7;
+    --warn-bg: #fff4d6;
+    --warn-fg: #6b4a00;
+    --warn-rule: #e8c96a;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -21,6 +25,9 @@
       --rule: #2a2f34;
       --accent: #7fc9b2;
       --card: #1b1f23;
+      --warn-bg: #3a2f10;
+      --warn-fg: #f3d58a;
+      --warn-rule: #7a6320;
     }
   }
   * { box-sizing: border-box; }
@@ -33,21 +40,17 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 17px;
     line-height: 1.65;
+    overflow-wrap: break-word;
   }
   main { max-width: 44rem; margin: 0 auto; }
-  h1 {
-    font-size: 1.6rem;
-    line-height: 1.25;
-    margin: 0 0 .35rem;
-    letter-spacing: -0.01em;
-  }
-  h2 {
-    font-size: 1.1rem;
-    margin: 2.25rem 0 .5rem;
-    color: var(--accent);
-    letter-spacing: -0.005em;
-  }
+  nav { font-size: .9rem; margin: 0 0 1.75rem; }
+  nav a { margin-right: 1rem; }
+  h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 .35rem; letter-spacing: -0.01em; }
+  h2 { font-size: 1.1rem; margin: 2.25rem 0 .5rem; color: var(--accent); letter-spacing: -0.005em; }
+  h3 { font-size: 1rem; margin: 1.5rem 0 .4rem; }
   p { margin: 0 0 1rem; }
+  ul.plain { margin: 0 0 1rem; padding-left: 1.25rem; }
+  ul.plain li { margin: 0 0 .35rem; }
   .sub { color: var(--muted); font-size: .95rem; margin: 0 0 1.75rem; }
   .meta {
     background: var(--card);
@@ -60,9 +63,40 @@
   .meta p { margin: 0 0 .4rem; }
   .meta p:last-child { margin: 0; }
   .meta strong { font-weight: 600; }
+  .pendiente {
+    background: var(--warn-bg);
+    color: var(--warn-fg);
+    border: 1px dashed var(--warn-rule);
+    border-radius: 4px;
+    padding: 0 .3rem;
+    font-weight: 600;
+  }
+  .aviso {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: .85rem 1rem;
+    font-size: .95rem;
+    margin: 0 0 1.75rem;
+  }
+  .lista-docs { list-style: none; padding: 0; margin: 0 0 2rem; }
+  .lista-docs li { margin: 0 0 .75rem; }
+  .lista-docs a {
+    display: block;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 1rem 1.15rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .lista-docs a span { display: block; color: var(--muted); font-weight: 400; font-size: .9rem; margin-top: .2rem; }
   hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0 1.25rem; }
   footer { color: var(--muted); font-size: .875rem; }
   a { color: var(--accent); }
+  code { font-size: .9em; }
   @media (max-width: 480px) {
     body { font-size: 16px; padding: 1.5rem 1rem 3rem; }
     h1 { font-size: 1.4rem; }
@@ -72,40 +106,71 @@
 <body>
 <main>
 
+  <nav><a href="index.html">Documentos</a><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a></nav>
+
   <h1>Política de Privacidad</h1>
   <p class="sub">Salmista Acordes — aplicación para Android</p>
 
+  <p class="aviso">La versión oficial de este documento vive en <a href="https://suitedelsalmista.com/privacidad.html">suitedelsalmista.com/privacidad.html</a>. Esta copia se conserva solo para que los enlaces anteriores no se rompan.</p>
   <div class="meta">
-    <p><strong>Aplicación:</strong> Salmista Acordes (<code>com.iglesia.acordes</code>)</p>
-    <p><strong>Responsable:</strong> Easy Tech Solutions — Hermosillo, Sonora, México</p>
-    <p><strong>Contacto:</strong> <a href="mailto:ezergz@gmail.com">ezergz@gmail.com</a></p>
-    <p><strong>Última actualización:</strong> 31 de julio de 2026</p>
+    <p><strong>Aplicación:</strong> Salmista Acordes (<code>com.iglesia.acordes</code>), para Android</p>
+    <p><strong>Responsable:</strong> EZ-Tech Solutions, nombre comercial de Adán Ezer González Zavala (persona física)</p>
+    <p><strong>Domicilio:</strong> <span class="pendiente">[DOMICILIO PARA NOTIFICACIONES — lo decide el founder]</span>, Nogales, Sonora, México</p>
+    <p><strong>Contacto:</strong> <a href="mailto:soporte@suitedelsalmista.com">soporte@suitedelsalmista.com</a></p>
+    <p><strong>Última actualización:</strong> 23 de septiembre de 2026</p>
   </div>
-
   <h2>1. Funcionamiento local</h2>
-  <p>Salmista funciona 100% en tu dispositivo, de forma offline. No necesita conexión a internet para operar.</p>
+  <p>Salmista funciona 100% en tu dispositivo, sin conexión. No necesita internet para operar y no solicita permiso de acceso a internet.</p>
 
   <h2>2. Sin cuentas ni datos personales</h2>
   <p>No recopilamos información personal. No hay registro, inicio de sesión ni cuentas de usuario.</p>
 
-  <h2>3. Sin rastreo</h2>
-  <p>La app no incluye analítica, rastreadores (trackers) ni telemetría de red. Tu actividad no se envía a ningún servidor.</p>
+  <h2>3. Sin anuncios ni rastreo</h2>
+  <p>La app no muestra anuncios y no incluye analítica, rastreadores (trackers) ni telemetría de red. Tu actividad no se envía a ningún servidor.</p>
 
   <h2>4. Dónde viven tus datos</h2>
-  <p>Tu biblioteca, audios y preferencias se guardan únicamente en el almacenamiento de tu dispositivo. No se suben a la nube ni se comparten con terceros.</p>
+  <p>Tu biblioteca, audios y preferencias se guardan únicamente en el almacenamiento de tu dispositivo. No se suben a la nube ni se comparten con terceros. Solo salen del dispositivo los archivos que tú decides exportar o compartir.</p>
 
   <h2>5. Permisos</h2>
-  <p>Los permisos que la app pueda solicitar (por ejemplo, acceso a archivos para importar cantos, o «No molestar» para el Modo Sábado) se usan solo para esa función y nunca para recopilar datos.</p>
+  <p>Los permisos que la app pueda solicitar (por ejemplo, "No molestar" para el Modo Sábado) se usan solo para esa función y nunca para recopilar datos. Para importar y exportar archivos usas el selector de archivos del sistema, que solo da acceso a lo que tú eliges.</p>
 
   <h2>6. Menores de edad</h2>
   <p>Salmista no está dirigida a menores de 13 años. Al iniciar la app se solicita confirmar que se tiene 13 años o más. Como la app no recopila información de ninguna persona, tampoco recopila información de menores.</p>
 
   <h2>7. Cambios</h2>
-  <p>Esta política puede actualizarse. La versión vigente se mostrará siempre dentro de la app.</p>
+  <p>Esta política puede actualizarse. La versión vigente se publica en <a href="https://suitedelsalmista.com/privacidad.html">https://suitedelsalmista.com/privacidad.html</a>.</p>
 
+  <p>Contacto: <a href="mailto:soporte@suitedelsalmista.com">soporte@suitedelsalmista.com</a></p>
+  <hr>
+
+  <h2>Aviso de privacidad (Ley Federal de Protección de Datos Personales en Posesión de los Particulares)</h2>
+  <p>Este apartado complementa la política anterior con la información que la ley mexicana pide que conozcas. No cambia nada de lo que se dice arriba: la app no recopila datos personales.</p>
+
+  <h3>Identidad y domicilio del responsable</h3>
+  <p>El responsable es Adán Ezer González Zavala, persona física, que opera con el nombre comercial EZ-Tech Solutions, con domicilio para oír y recibir notificaciones en <span class="pendiente">[DOMICILIO PARA NOTIFICACIONES — lo decide el founder]</span>, Nogales, Sonora, México. Correo de contacto: <a href="mailto:soporte@suitedelsalmista.com">soporte@suitedelsalmista.com</a>.</p>
+
+  <h3>Qué datos personales tratamos y para qué</h3>
+  <p>La app Salmista Acordes no recaba ni trata datos personales: todo lo que guardas en ella se queda en tu dispositivo y nunca llega a nosotros.</p>
+  <p>Solo recibimos datos personales si tú decides escribirnos por tu cuenta a <a href="mailto:soporte@suitedelsalmista.com">soporte@suitedelsalmista.com</a>, fuera de la app. En ese caso tratamos tu dirección de correo, el nombre que aparezca en tu mensaje y lo que nos escribas, con una sola finalidad: atender y responder tu consulta. No los usamos para publicidad, mercadotecnia ni para crear perfiles, y no tenemos finalidades secundarias. No tratamos datos personales sensibles. Conservamos esos mensajes solo el tiempo necesario para atender tu consulta.</p>
+
+  <h3>Transferencias</h3>
+  <p>No transferimos tus datos personales a terceros. El servicio de correo con el que recibimos los mensajes solo los resguarda por cuenta nuestra y no los usa para fines propios.</p>
+
+  <h3>Derechos ARCO y revocación del consentimiento</h3>
+  <p>Tienes derecho a acceder a los datos personales que tengamos de ti, a pedir que los corrijamos, a que los eliminemos y a oponerte a su uso (derechos ARCO), así como a revocar tu consentimiento.</p>
+  <p>Para ejercerlos, escríbenos a <a href="mailto:soporte@suitedelsalmista.com">soporte@suitedelsalmista.com</a> con el asunto "Derechos ARCO" e incluye:</p>
+  <ul class="plain">
+    <li>tu nombre y el correo desde el que nos escribiste antes, que nos sirve para identificarte;</li>
+    <li>el derecho que quieres ejercer y los datos a los que se refiere;</li>
+    <li>cualquier dato que nos ayude a localizar tu mensaje.</li>
+  </ul>
+  <p>Te responderemos por correo, a la dirección desde la que nos escribas, dentro de los plazos que establece la ley.</p>
+
+  <h3>Cambios a este aviso</h3>
+  <p>Cualquier cambio a esta política o a este aviso se publica en esta misma página, con su fecha de actualización. Si el cambio afecta a la app, también se reflejará en el texto que la app muestra dentro de ella.</p>
   <hr>
   <footer>
-    <p>Documento publicado para cumplir con los requisitos de Google Play. El mismo texto está disponible sin conexión dentro de la aplicación.</p>
+    <p>Documento publicado para cumplir con los requisitos de Google Play. El mismo texto (sin el bloque de identificación ni el aviso de la ley mexicana) está disponible sin conexión dentro de la aplicación.</p>
   </footer>
 
 </main>
